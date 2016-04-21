@@ -1,0 +1,94 @@
+#header{
+	height: 18px;
+	width: 100%;
+	background-color: maroon;
+	text-align: center;
+	color: white;
+	padding-top: 2%;
+	padding-left: 2%;
+}
+
+#header2{
+	height: 17px;
+	width: 100%;
+	background-color: maroon;
+	text-align: center;
+	color: white;
+	padding-top: 2%;
+	padding-left: 2%; 
+    padding-bottom: 2%;
+}
+
+#form{
+	height: 600px;
+	width: 100%;
+	background-color: white;
+	text-align: center;
+	padding-top: 2%;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#menuItem{
+    position: absolute;
+    left: -30%;
+    width: 30%;
+    height: 100%;
+    background: maroon;
+    transition: .5s;
+}
+
+.leftSlide{
+    -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s;
+  transition: .5s;
+  margin-left: 30% !important;
+}
+
+#menuButton{
+    float: left;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+}
+
+#menuClose{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+}
+
+ul{
+    list-style-type: none;
+}
+
+select{
+	height:30px;
+	width: 40px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	text-align: center;
+}
+
+option{
+	height: 50px;
+	width: 30px;
+	text-align: center;
+}

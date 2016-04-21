@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Status</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="knightWatchMainCSS3.css?">
+  <link rel="stylesheet" href="style2.css?">
+  <script src="script.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
+  <!--<script src="knightWatchMainJS2.js"></script>-->
+
+</head>
+
+<body>
+  <div id="header">
+    <!--  <div>
+    <button id="menuButton">Menu</button>
+      </div> -->
+    Request Status
+  </div>
+    <div id="header2">
+    <button id="menuButton">Menu</button>
+      </div>
+  <div class="wrapper">
+  <div id="menuItem">
+    <ul>
+      <a href="knightWatchMainPage3.html">Request Escort</a><br>
+      <a href="knightWatchStatusPage.html">Existing Requests</a><br>
+      <a href="knightWatchLogIn.html">Log Out</a>
+    </ul>
+    <button id="menuClose">Close</button>
+  </div>
+      <!-- Start form -->
+      <div id="form">
+      <form id="select">
+        Type of service requested: <br> 
+      	<p>Type goes Here</p>
+        Time for pickup: <br>
+        <p>Time goes here</p>
+          Pickup Location: <br>
+          <p>Pickup location goes here</p>
+          Drop Off Location: <br>
+          <p>Drop off location goes here</p>
+      Number of People: <br>
+      <p>Number of people goes here</p>
+
+      <div class="checkout-wrap">
+  <ul class="checkout-bar">
+
+    <li class="first visited">
+      <a href="#">Request Sent</a>
+    </li>
+    
+    <li class="previous visited">Request Approved</li>
+    
+    <li class="previous visited">Escort In Transit</li>
+    
+    <li class="active">User Picked Up</li>
+    
+    <li class="">Complete</li>
+       
+  </ul>
+</div>
+
+
+    </form>
+    <!-- end form -->
+</div>
+
+<script type="text/javascript">
+  document.getElementById("menuButton").onclick = function(){
+    document.getElementById("menuItem").classList.add('leftSlide');
+  }
+
+  document.getElementById("menuClose").onclick = function(){
+    document.getElementById("menuItem").classList.remove("leftSlide");
+  }
+</script>
+</body>
+</html>
