@@ -19,6 +19,7 @@
 		
       if($count == 1) {
          //session_register("myusername");
+         session_start();
          $_SESSION['login_user'] = $myusername;
          
          header("location: knightWatchMainPage3.html");

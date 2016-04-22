@@ -35,7 +35,7 @@
   </div>
       <!-- Start form -->
       <div id="form">
-      <form id="select">
+      <form id="select" action = "Form.php" method="POST">
         Type of service requested: <br> 
       <select id="ridewalk" name="ridewalk" form="select">
         <option value="walk">Walk</option>
@@ -44,21 +44,34 @@
         Time for pickup: <br>
         <input id="time" type="time" name="time"></input><br><br>
           Pickup Location: <br>
-          <select id="pickuplocation" name="pickupLocation">
+          <!--<select id="pickuplocation" name="pickupLocation">
             <option value="zurn">Zurn</option>
             <option value="harb">Harborview</option>
             <option value="other">Other</option>
           </select><br><br>
         If other please specify your location: <br>
-        <input id="otherpickuploc" type="text"></input><br><br>
+        <input id="otherpickupLocation" type="text" name="otherpickupLocation"></input><br><br>
+      -->
+      <input id="pickuplocation" type="text" list="spots" name="pickupLocation" />
+         <datalist id="spots">
+           <option>Harborview</option>
+           <option>Zurn</option>
+         </datalist><br><br>
           Drop Off Location: <br>
-          <select id="dropoffloc" name="dropoffLocation">
+          <!--<select id="dropofflocation" name="dropoffLocation">
             <option value="zurn">Zurn</option>
             <option value="harborview">Harborview</option>
             <option value="other">Other</option>
           </select><br><br>
         If other please specify your location: <br>
-        <input id = "otherdroploc" type="text" name="dropoffLocation"></input><br><br>
+        <input id = "otherdroplocation" type="text" name="otherdropoffLocation"></input><br><br>
+      -->
+      <input id="dropofflocation" type="text" list="spots" name="dropoffLocation" />
+         <datalist id="spots">
+           <option>Harborview</option>
+           <option>Zurn</option>
+         </datalist><br><br>
+         
       Number of People: <br>
       <select id="numPeople" name="numPeople" >
         <option value="1">1</option>
