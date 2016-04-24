@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Requests</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="knightWatchMainCSS3.css?">
+  <script src="script.js"></script>
+  <!--<script src="knightWatchMainJS2.js"></script>-->
+
+</head>
+
+<body>
+  <div id="header">
+    <!--  <div>
+    <button id="menuButton">Menu</button>
+      </div> -->
+    Pending Requests
+  </div>
+    <div id="header2">
+      </div>
+  <div class="wrapper">
+      <div id="pendingTable">
+      <table id="myTableData"  border="1" cellpadding="2">
+    <tr>
+        <td><b>Name</b></td>
+        <td><b>Walk/Ride</b></td>
+        <td><b>Pickup Time</b></td>
+        <td><b>Pickup Location</b></td>
+        <td><b>Drop off Location</b></td>
+        <td><b>Number of People</b></td>
+        <td><b>Accept/Deny</b></td>
+    </tr>
+</table>
+</div>
+</div>
+<script>
+
+var table = document.getElementById("myTableData");
+
+//To dynamically add rows, pull in the number of pending requests and in for loop do these steps replacing insertRow # accordingly
+
+//int rowCount = # of requests pulled from database
+
+//for(int i = 1; i < rowCount; i++){
+
+// Create an empty <tr> element and add it to the 1st position of the table:
+
+//var row = table.insertRow(rowCount);
+var row = table.insertRow(1);
+
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+//this can be left as is when making dynamic
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell3 = row.insertCell(2);
+var cell4 = row.insertCell(3);
+var cell5 = row.insertCell(4);
+var cell6 = row.insertCell(5);
+var cell7 = row.insertCell(6);
+
+
+// Add some text to the new cells:
+//Use items stored in database instead when making dynamic
+cell1.innerHTML = "Jen Moran";
+cell2.innerHTML = "Ride";
+cell3.innerHTML = "9:00 pm";
+cell4.innerHTML = "Rec Center";
+cell5.innerHTML = "Harborview";
+cell6.innerHTML = "2";
+
+//this can be left as is when making dynamic
+var button_A = document.createElement("input");
+button_A.setAttribute("value","Accept");
+button_A.setAttribute("type","button");
+var button_B = document.createElement("input");
+button_B.setAttribute("value","Deny");
+button_B.setAttribute("type","button");
+cell7.appendChild(button_A);
+cell7.appendChild(document.createElement('br'));
+cell7.appendChild(button_B);
+
+//}
+</script>
+</body>
+</html>
