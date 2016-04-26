@@ -1,14 +1,16 @@
+@import url(http://fonts.googleapis.com/css?family=Poiret+One|Varela+Round);
+
 #header{
-	height: 18px;
+	height: 50px;
 	width: 100%;
 	background-color: maroon;
 	text-align: center;
 	color: white;
 	padding-top: 2%;
-	padding-left: 2%;
+	padding-left: 0%;
 }
 
-#header2{
+/*#header2{
 	height: 17px;
 	width: 100%;
 	background-color: maroon;
@@ -18,7 +20,7 @@
 	padding-left: 2%; 
     padding-bottom: 2%;
 }
-
+*/
 #form{
 	height: 600px;
 	width: 100%;
@@ -27,12 +29,79 @@
 	padding-top: 2%;
 }
 
-.wrapper {
+/*.wrapper {
     position: relative;
     overflow: hidden;
     height: 600px;
     width: 100%;
     border: 1px solid black;
+}
+*/
+
+html, body {
+margin: 0;
+padding: 0; }
+
+
+.toggle {
+text-decoration: none;
+font-size: 2em;
+color: rgba(0, 0, 0, 0.61);
+-webkit-transition: all 0.15s ease-out 0;
+-moz-transition: all 0.15s ease-out 0;
+transition: all 0.45s ease-out 0;
+position: fixed;
+top: 20px;
+left: 20px;
+z-index: 1;
+cursor: pointer;
+}
+
+.sidebar {
+position: fixed;
+top: 20px;
+bottom: 0px;
+left: -190px;
+-webkit-transition: all 0.15s ease-out 0;
+-moz-transition: all 0.15s ease-out 0;
+transition: all 0.15s ease-out 0;
+width: 10rem;
+padding: 1.5em;
+background: #800000; 
+}
+
+.sidebar ul {
+list-style: none;
+margin: 0;
+padding: 0; 
+}
+
+.sidebar li a {
+color: #fff;
+font-family: 'Trebuchet MS', cursive;
+font-size: 1.2em;
+margin: 0;
+margin-bottom: 20px;
+cursor: pointer;
+text-decoration: none;
+line-height: 200%;
+}
+
+.sidebar a:hover {
+  color: rgba(255, 228, 43, .80); 
+}
+
+#slide:checked + .container .sidebar {
+left: 0px;
+ }
+
+#slide:checked + .container .toggle {
+left: 200px;
+ }
+
+
+#slide {
+display: none; 
 }
 
 #menuItem{
