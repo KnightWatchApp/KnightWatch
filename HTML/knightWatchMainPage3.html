@@ -14,51 +14,78 @@
 
 </head>
 
-<body>
+<body link = "#ffcc66" vlink = "#ffcc66" alink = "#ffcc66">
+
   <div id="header">
     <!--  <div>
     <button id="menuButton">Menu</button>
-      </div> -->
+    </div> -->
     Request
   </div>
-    <div id="header2">
-    <button id="menuButton">Menu</button>
-      </div>
+  
+  <input type="checkbox" id="slide" name="" value="" />
+  <div class="container">
+    <label for="slide" class="toggle">☰</label>
+    <nav class="sidebar"> 
+      <ul>
+        <li><a href="knightWatchMainPage3.html">Request Escort </a></li>
+        <li><a href="knightWatchStatusPage.html">Existing Requests</a></li>
+        <li><a href="knightWatchLogIn.html">Log Out</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!--
   <div class="wrapper">
   <div id="menuItem">
     <ul>
+      
       <a href="knightWatchMainPage3.html">Request Escort</a><br>
       <a href="knightWatchStatusPage.html">Existing Requests</a><br>
       <a href="knightWatchLogIn.html">Log Out</a>
+      
     </ul>
     <button id="menuClose">Close</button>
   </div>
+  -->
       <!-- Start form -->
       <div id="form">
-      <form id="select">
-        Type of service requested: <br> 
+      <form id="select" action = "Form.php" method="POST">
+        Type of Service Requested: <br> 
       <select id="ridewalk" name="ridewalk" form="select">
         <option value="walk">Walk</option>
         <option value="ride">Ride</option>
       </select><br><br>
-        Time for pickup: <br>
+        Time for Pickup: <br>
         <input id="time" type="time" name="time"></input><br><br>
           Pickup Location: <br>
-          <select id="pickuplocation" name="pickupLocation">
+          <!--<select id="pickuplocation" name="pickupLocation">
             <option value="zurn">Zurn</option>
             <option value="harb">Harborview</option>
             <option value="other">Other</option>
           </select><br><br>
         If other please specify your location: <br>
-        <input id="otherpickuploc" type="text"></input><br><br>
+        <input id="otherpickupLocation" type="text" name="otherpickupLocation"></input><br><br>
+      -->
+      <input id="pickuplocation" type="text" list="spots" name="pickupLocation" />
+         <datalist id="spots">
+           <option>Harborview</option>
+           <option>Zurn</option>
+         </datalist><br><br>
           Drop Off Location: <br>
-          <select id="dropoffloc" name="dropoffLocation">
+          <!--<select id="dropofflocation" name="dropoffLocation">
             <option value="zurn">Zurn</option>
             <option value="harborview">Harborview</option>
             <option value="other">Other</option>
           </select><br><br>
         If other please specify your location: <br>
-        <input id = "otherdroploc" type="text" name="dropoffLocation"></input><br><br>
+        <input id = "otherdroplocation" type="text" name="otherdropoffLocation"></input><br><br>
+      -->
+      <input id="dropofflocation" type="text" list="spots" name="dropoffLocation" />
+         <datalist id="spots">
+           <option>Harborview</option>
+           <option>Zurn</option>
+         </datalist><br><br>
+         
       Number of People: <br>
       <select id="numPeople" name="numPeople" >
         <option value="1">1</option>
