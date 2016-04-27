@@ -40,7 +40,7 @@
             header("location: knightWatchAdminPage.html");
       }
       else {
-         $error = "Your Login Name or Password is invalid";
+         header("location: knightWatchInvalidLogin.html");
       }
    }
 ?>
