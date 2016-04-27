@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="knightWatchMainCSS3.css?">
   <script src="script.js"></script>
   <script src="jquery-1.12.3.min.js"></script>
-  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  
   <!--<script src="knightWatchMainJS2.js"></script>-->
 
 </head>
@@ -45,20 +45,13 @@
 var table = document.getElementById("myTableData");
 
 //To dynamically add rows, pull in the number of pending requests and in for loop do these steps replacing insertRow # accordingly
-// var neededData; 
-// $.getJSON('http://localhost:8888/KnightWatch-master/Database/adminRetrieveRequests.php', data, function(jsonData) {
-//     neededData = jsonData; 
-// }); 
-
-// var rowCount = neededData.rowCount;
-
-
-//for(int i = 1; i < rowCount; i++){
-
-// Create an empty <tr> element and add it to the 1st position of the table:
-
-//var row = table.insertRow(rowCount);
-var row = table.insertRow(1);
+var neededData; 
+$.getJSON('http://localhost:8888/KnightWatch-master/Database/adminRetrieveRequests.php', function(jsonData) {
+    neededData = jsonData; 
+    //var row = table.insertRow(rowCount);
+var rowCount = Object.keys(neededData).length;
+for(var i = 1; i <= rowCount; i++){
+  var row = table.insertRow(1);
 
 // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
 //this can be left as is when making dynamic
@@ -73,12 +66,12 @@ var cell7 = row.insertCell(6);
 
 // Add some text to the new cells:
 //Use items stored in database instead when making dynamic
-cell1.innerHTML = "Jen Moran";
-cell2.innerHTML = "Ride";
-cell3.innerHTML = "9:00 pm";
-cell4.innerHTML = "Rec Center";
-cell5.innerHTML = "Harborview";
-cell6.innerHTML = "2";
+cell1.innerHTML = neededData[i-1]["Username"];
+cell2.innerHTML = neededData[i-1]["Service_Type"];
+cell3.innerHTML = neededData[i-1]["Time_of_Pickup"];
+cell4.innerHTML = neededData[i-1]["Pickup_Location"];
+cell5.innerHTML = neededData[i-1]["Drop_Off_Location"];
+cell6.innerHTML = neededData[i-1]["Number_of_People"];
 
 //this can be left as is when making dynamic
 var button_A = document.createElement("input");
@@ -90,8 +83,17 @@ button_B.setAttribute("type","button");
 cell7.appendChild(button_A);
 cell7.appendChild(document.createElement('br'));
 cell7.appendChild(button_B);
+}
 
-//}
+}); 
+
+// var rowCount = neededData.rowCount;
+
+
+
+
+// Create an empty <tr> element and add it to the 1st position of the table:
+
 </script>
 </body>
 </html>
