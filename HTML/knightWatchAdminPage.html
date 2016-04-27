@@ -10,6 +10,8 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <link rel="stylesheet" href="knightWatchMainCSS3.css?">
   <script src="script.js"></script>
+  <script src="jquery-1.12.3.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   <!--<script src="knightWatchMainJS2.js"></script>-->
 
 </head>
@@ -43,8 +45,13 @@
 var table = document.getElementById("myTableData");
 
 //To dynamically add rows, pull in the number of pending requests and in for loop do these steps replacing insertRow # accordingly
+// var neededData; 
+// $.getJSON('http://localhost:8888/KnightWatch-master/Database/adminRetrieveRequests.php', data, function(jsonData) {
+//     neededData = jsonData; 
+// }); 
 
-//int rowCount = # of requests pulled from database
+// var rowCount = neededData.rowCount;
+
 
 //for(int i = 1; i < rowCount; i++){
 
