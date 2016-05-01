@@ -5,7 +5,8 @@ CREATE TABLE IF NOT EXISTS `login`(
 	`Password` varchar(255) DEFAULT NULL,
 	`First_Name` varchar(255) DEFAULT NULL,
 	`Last_Name` varchar(255) DEFAULT NULL,
-	`Admin` boolean Default 0
+	`Admin` boolean Default 0,
+	PRIMARY KEY (Username)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `login` (`Username`, `Password`, `First_Name`, `Last_Name`) 
