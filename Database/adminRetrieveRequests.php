@@ -1,7 +1,8 @@
 <?php
-
-$connection = mysql_connect("localhost", "root", "root"); // Establishing Connection with Server..
+error_reporting(E_ALL ^ E_DEPRECATED);
+$connection = mysql_connect("localhost", "root", ""); // Establishing Connection with Server..
 $db = mysql_select_db("knightwatchtest", $connection); // Selecting D
+
 
 
 $sql = "SELECT * FROM request";
