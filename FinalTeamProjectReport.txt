@@ -1,0 +1,80 @@
+﻿Marco Orlando
+Steve Caulfield
+Michael Frio
+Jen Moran
+
+
+Introduction of Project Scope:
+
+
+Requirements: 
+This project was to create a mobile app for the Knight Watch escort program currently run by Gannon’s Police and Safety Department. This app should allow students, faculty, and staff at Gannon University to request an escort. This escort can either be a walking escort or a ride in the Knight Watch van. Both will take the requesting person to and from various locations around the campus and nearby. A much more detailed view of the requirements can be found in the Requirements Baseline which will be included with this report. We have also included the official policies of Knight Watch as administered by Gannon Police and Safety. This document will also be included with this report.
+
+
+Results/Deliverables: 
+Our team has developed an initial prototype in the form of a web app. Our hope is that eventually, using either Cordova or Phonegap, this web app can be converted into a native mobile app for both iOS and Android. Currently, our web app is being run on a WAMP stack, using localhost as the server. We have also got the HTML pages up on a VM given to us by Gannon ITS. However, this server only displays the pages, and does not have any database functionality. More information about the setup of this project can be found in the ReadMe included with the github repository.
+
+
+
+
+________________
+
+
+Application of Scrum Software Process
+        Scrum Definition: “Scrum is an agile process most commonly used for product development, especially software development. Scrum is a project management framework that is applicable to any project with aggressive deadlines, complex requirements and a degree of uniqueness. In Scrum, projects move forward via a series of iterations called sprints. Each sprint is typically two to four weeks long” (Cohns).
+Our team used a variation of the Scrum software process model for this project. We did not assign a sprint leader as we felt this to be unnecessary. Instead, we all acted in some part as equal sprint leaders. Also, we did not hold sprint retrospectives as we felt they are unnecessary given the time constraints on this project. Our sprints were all 1 week long, with each new sprint beginning on the Wednesday of each week. Also on Wednesday, we would meet with our requirements team to discuss what we had accomplished in the previous sprint as well as to negotiate what we would be working on for the upcoming sprint.
+These meetings provided a good sprint review as sometimes the requirements team would provide us with new insight as to what functionality was most important. We would then update our backlog accordingly in order to reflect the negotiated tasks. We had daily sprints on every Tuesday, Thursday and Sunday in which we would discuss what we were currently working on as well as help each other with any problems faced.
+        To create our backlog, we mainly used the “Issues” functionality in Github to assign tasks to our team and keep track of our progress. We also connected our Github repository to Waffle.io to keep additional track of all issues. Unfortunately, we have realized that only those who are assigned to the project in Github can view this backlog. To fix this, we have created a backlog in a Google Sheets document which will be included with this report.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+________________
+
+
+
+
+How Software Documentation was Developed and Applied
+        We created a Software Development Life Cycle plan document at the start of the project, before we understood what was expected in this project. We used that to plan our code sprints and meetings following the SCRUM development cycle, and followed that as our guidelines for development during this project. This plan drove our weekly cycles of code sprints, and helped us shape the format of our development process throughout working on this project. 
+We then got the basic requirements baseline from our Software Requirements team, and discussed changes and updates to those documents throughout the process. These requirements became the basis of the product we developed. Every functionality that is currently in Knight Watch is there due to the information given to us by the requirements team. The baseline documents are included in the “RequirementsBaselines” folder.
+The development team created the test cases that were used for each sprint and documented these in Google Drive. These test cases are the primary documentation of any Scrum process, and will be included with this report. New test cases were created as new functionalities emerged. We made sure to run regression tests at the end of every sprint, to see how changes to the project affected older, previously working components. These test cases can be found in each of the sprint folders with the exception of sprint 1. This is because at the end of sprint 1, we did not have any functionalities to test. The files are named “Sprint X Test Cases” where X is the number of a sprint. Each set of test cases can be found in its respective sprint folder.
+There were weekly meetings between the requirements and development team on Wednesdays to wrap up the sprint and show the requirements team what had been done that week. This gave us the chance to see where each team was at, any new issues that needed to be solved, and plan meetings with stakeholders when needed. We worked with the Requirements team to develop documentation of what was done during each code sprint, including the tasks we planned to work on and what status they were at the end of the code sprint, whether completed, not started, in progress, etc. This documentation was in the form of “Issues” on Github. We have also included our backlog in the form of an excel spreadsheet. This spreadsheet is called “Knight Watch Backlog.”
+How Resulting Implementation was Developed from Documentation
+        Due to the nature of the Scrum development process, we have very little documentation of this project other than test cases, our requirements baseline, and our backlog. We did not formally create any documentation for the User Interface other than our test cases which describe what should happen when a certain link or button is clicked. For instance, our test cases describe that after a user registers for an account in the system, they should immediately be taken to the login screen when hitting “Register”. We also have more simple test cases such as clicking the “Existing Requests” link should take them to the “Existing Requests” page.
+        Our test cases also describe how Knight Watch should work with the database. For instance, we have a test case concerned with a user trying to register with a username that is already in the database. In this case, the user should be notified that a different username is necessary to register in the system. The test case effectively documents how this functionality should be working since it does not add two people with the same usernames (Username is a primary key) . However, it does not notify the user that the name is already taken, it just brings you back to the login. In anycase, the test case effectively documents what should be happening with the login functionality.
+        We created PHP scripts to send the user input from the HTML forms to the database that we set up in PHPMyAdmin on localhost. For example, we have a test case in Sprint 3 that check if a user inputs all escort request information and hits submit it will go to the database. This failed in Sprint 3 (see Test Case 1), but passed in Sprint 4 (Test Case 1) when we changed the user input coming from the form and matched it with expected input in the database side. 
+        For our database, we have 3 SQL scripts (login, escort, and staff) which will create the database and tables. These SQL scripts are located in the Database folder. To document these scripts, we created test cases for them in sprint 4. These test cases basically just indicate that these scripts exist and should run correctly.
+Moving on, the requirements baseline was a huge contributing factor to how this project was implemented. The business rules, use cases, and flow charts included in that document influenced our decisions of which functionalities to work on. These functionalities were then included in our backlog.
+        Finally, we have listed the work items for each sprint and their status at the conclusion of each code sprint. These were taken from the backlog in GitHub at the beginning of each sprint, and then worked on during that week. There are some items that could not be completed because of time restraints. Those are left to be done later for the next team to work on this project. 
+        Gannon’s ITS department spun up a Windows Virtual Server for us to put our code on and allow users and developers to view. The server name is SEDev1, address is SEDev1.gannon.edu. The IP address to access the front end user interface is http://206.180.208.123/, and the pages can be viewed and navigated through from there. As of right now, there is no database set up on that server so the functionality is not there. This is part of what is left to the next team to continue work on this project. 
+
+
+References:
+Cohns, Mike. "Scrum Overview: Agile Software Development." Mike Cohns Blog Succeeding With Agile RSS. Web. 01 May 2016. <https://www.mountaingoatsoftware.com/agile/scrum/overview>. 
+
+
+
+
+
+
+
+
+
+
+The server is running Windows Server 2012 R2 (4/29/16)
+Kaspersky and Windows updates are required and are handled by ITS
+Remote into the server while on Gannon's network to configure.
+Access to Gannon's network can also be gained via vpn.gannon.edu
+Server Name: SEDev1
+Server Address: SEDev1.gannon.edu
+Login: SEDev1\DEV1Admin = s3d3von!
