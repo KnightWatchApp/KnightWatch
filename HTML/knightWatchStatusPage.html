@@ -46,7 +46,75 @@
       </ul>
     </nav>
   </div>
-      <!-- Start form -->
+  <!-- <body> -->
+
+    <div id="header2">
+      </div>
+  <div class="wrapper">
+      <div id="pendingTable">
+      <table id="myTableData"  border="1" cellpadding="2">
+    <tr>
+        <td><b>Name</b></td>
+        <td><b>Walk/Ride</b></td>
+        <td><b>Pickup Time</b></td>
+        <td><b>Pickup Location</b></td>
+        <td><b>Drop off Location</b></td>
+        <td><b>Number of People</b></td>
+       <!-- <td><b>Accept/Deny</b></td> -->
+    </tr>
+</table>
+</div>
+</div>
+<script>
+
+var table = document.getElementById("myTableData");
+
+//To dynamically add rows, pull in the number of pending requests and in for loop do these steps replacing insertRow # accordingly
+var neededData; 
+$.getJSON('http://localhost/KnightWatch-master/status.php', function(jsonData) {
+    neededData = jsonData; 
+    //var row = table.insertRow(rowCount);
+var rowCount = Object.keys(neededData).length;
+for(var i = 1; i <= rowCount; i++){
+  var row = table.insertRow(1);
+
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+//this can be left as is when making dynamic
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell3 = row.insertCell(2);
+var cell4 = row.insertCell(3);
+var cell5 = row.insertCell(4);
+var cell6 = row.insertCell(5);
+//var cell7 = row.insertCell(6);
+
+
+// Add some text to the new cells:
+//Use items stored in database instead when making dynamic
+cell1.innerHTML = neededData[i-1]["Username"];
+cell2.innerHTML = neededData[i-1]["Service_Type"];
+cell3.innerHTML = neededData[i-1]["Time_of_Pickup"];
+cell4.innerHTML = neededData[i-1]["Pickup_Location"];
+cell5.innerHTML = neededData[i-1]["Drop_Off_Location"];
+cell6.innerHTML = neededData[i-1]["Number_of_People"];
+
+//this can be left as is when making dynamic
+//var button_A = document.createElement("input");
+//button_A.setAttribute("value","Accept");
+//button_A.setAttribute("type","button");
+//var button_B = document.createElement("input");
+//button_B.setAttribute("value","Deny");
+//button_B.setAttribute("type","button");
+//cell7.appendChild(button_A);
+//cell7.appendChild(document.createElement('br'));
+//cell7.appendChild(button_B);
+}
+
+}); 
+</script>
+<!--
+ This is our old stuff
+      Start form 
       <div id="form">
       <form id="select">
         Type of service requested: <br> 
@@ -80,8 +148,9 @@
 
 
     </form>
-    <!-- end form -->
+    end form
 </div>
+-->
 
 <script type="text/javascript">
   document.getElementById("menuButton").onclick = function(){

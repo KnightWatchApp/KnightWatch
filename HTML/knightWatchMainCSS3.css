@@ -40,7 +40,8 @@
 
 html, body {
 margin: 0;
-padding: 0; }
+padding: 0; 
+}
 
 
 .toggle {
@@ -61,7 +62,7 @@ cursor: pointer;
 position: fixed;
 top: 20px;
 bottom: 0px;
-left: -190px;
+left: -300px;
 -webkit-transition: all 0.15s ease-out 0;
 -moz-transition: all 0.15s ease-out 0;
 transition: all 0.15s ease-out 0;

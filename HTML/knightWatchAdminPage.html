@@ -46,7 +46,7 @@ var table = document.getElementById("myTableData");
 
 //To dynamically add rows, pull in the number of pending requests and in for loop do these steps replacing insertRow # accordingly
 var neededData; 
-$.getJSON('http://localhost:8888/KnightWatch-master/Database/adminRetrieveRequests.php', function(jsonData) {
+$.getJSON('http://localhost/KnightWatch-master/adminRetrieveRequests.php', function(jsonData) {
     neededData = jsonData; 
     //var row = table.insertRow(rowCount);
 var rowCount = Object.keys(neededData).length;
